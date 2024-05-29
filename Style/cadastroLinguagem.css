@@ -1,0 +1,73 @@
+body {
+  font: 100% "Work Sans", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.cadastro_linguagem {
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cadastro_linguagem h2 {
+  text-align: center;
+}
+.cadastro_linguagem label {
+  display: block;
+  margin-bottom: 10px;
+}
+.cadastro_linguagem input[type="text"],
+.cadastro_linguagem input[type="radio"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.cadastro_linguagem .radio-container {
+  display: flex;
+  flex-direction: column;
+}
+.cadastro_linguagem .radio-container div {
+  display: flex;
+  align-items: center;
+}
+.cadastro_linguagem input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+}
+.cadastro_linguagem input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #1004c5;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.cadastro_linguagem input[type="submit"]:hover {
+    background-color: #07216b;
+}
+.cadastro-linguagem-botao-voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #616161;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.cadastro-linguagem-botao-voltar:hover {
+  background-color: #424242;
+}

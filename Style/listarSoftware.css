@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font: 100% "Work Sans", Helvetica, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #000000;
+    text-align: center;
+  }
+  
+  .search-container {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .software-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .software-table th, .software-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .software-table th {
+    background-color: #f4f4f4;
+  }
+
+  .comprar-btn {
+    background-color: #1004c5;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .software-table td:nth-child(1) {
+    text-align: center;
+  }
+  
+  
+  .details {
+    display: none;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    max-width: 800px; /* Definindo uma largura máxima para a janela retrátil */
+  }
+  
+  .details p {
+    margin: 0;
+  }
+  
+  .show-details-btn {
+    background-color: #1004c5;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .listar-botao-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #616161;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .listar-botao-voltar:hover {
+    background-color: #424242;
+  }
+
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #1004c5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

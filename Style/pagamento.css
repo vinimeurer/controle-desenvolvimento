@@ -1,0 +1,137 @@
+body {
+    font: 100% "Work Sans", Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .payment-options {
+    background-color: #1004c5;
+    color: #fff;
+    text-align: center;
+    width: 400px; /* Mantém o mesmo tamanho */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin: 0 auto; /* Adiciona margens automáticas para centralizar horizontalmente */
+  }
+  
+  .payment-options ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+  }
+  
+  .payment-options li {
+    display: inline;
+  }
+  
+  .payment-options a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  .payment-options a.active {
+    background-color: #07216b;
+  }
+  
+  .payment-options a:not(:last-child) {
+    border-right: 1px solid #fff;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza todo o conteúdo */
+  }
+  
+  h1,h3 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o conteúdo dos formulários */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: calc(100% - 20px); /* Subtrai o padding */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    display: block;
+    width: calc(100% - 20px); /* Subtrai o padding */
+    padding: 10px;
+    background-color: #1004c5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #07216b;
+  }
+  
+  .payment-details {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .payment-details img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .payment-details p {
+    margin-top: 10px;
+  }
+  
+  .payment-details button {
+    padding: 10px;
+    background-color: #1004c5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .payment-details button:hover {
+    background-color: #07216b;
+  }
+
+  .cadastro-software-botao-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #616161;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .cadastro-software-botao-voltar:hover {
+    background-color: #424242;
+  }
+  

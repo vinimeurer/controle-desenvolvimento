@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Controle de desenvolvimento</title>
+  <meta content="Site de controle de desenvolvimento" name="description" property="og:description">
+  <link href="../Style/pagamento.css" type="text/css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- Load JQuery, as our little script depends on it -->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,600,400" rel="stylesheet" type="text/css"> <!-- Load our font from Google -->
+  <script src="#"></script>
+</head>
+<body>
+  <div class="confirmation-message">
+    <h1>Parabéns pela sua compra!</h1>
+    <h3>Por favor, realize o pagamento com alguma das opções abaixo:</h3>
+  </div>
+  <nav class="payment-options">
+    <ul>
+      <li><a href="#" class="active" data-payment="credit-card"><i class="far fa-credit-card"></i> Cartão de Crédito</a></li>
+      <li><a href="#" data-payment="pix"><i class="fas fa-qrcode"></i> PIX</a></li>
+      <li><a href="#" data-payment="bitcoin"><i class="fab fa-bitcoin"></i> Bitcoin</a></li>
+    </ul>
+  </nav>
+  
+  <div class="container">
+    <h1>Checkout</h1>
+    <div id="credit-card" class="payment-details">
+      <h2>Cartão de Crédito</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="card">Número do Cartão:</label>
+          <input type="text" id="card" name="card" required>
+        </div>
+        <div class="form-group">
+          <label for="expiry">Data de Expiração:</label>
+          <input type="text" id="expiry" name="expiry" placeholder="MM/AA" required>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" required>
+        </div>
+        <button type="submit">Pagar</button>
+      </form>
+    </div>
+    <div id="pix" class="payment-details" style="display: none;">
+      <h2>PIX</h2>
+      <img src="../Assets/img/qrcode.png" alt="QR Code PIX">
+      <p>00020126580014BR.GOV.BCB.PIX0136886ebd58-1241-4059-932d-11adcba2c45352040000530398654175
+        00000.000.000.005802BR5923controle
+        desenvolvimento6008curitiba62150511
+        CONTROLEDEV6304AD59 </p>
+      <button id="copyPixButton">Copiar Código PIX</button>
+    </div>
+    <div id="bitcoin" class="payment-details" style="display: none;">
+      <h2>Bitcoin</h2>
+      <p>Envie o valor total para o seguinte endereço de carteira Bitcoin:</p>
+      <p><strong>Endereço Bitcoin:</strong> 1ABCdefGHIJKLMNoPQRstuVWXYZ123456</p>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const paymentOptions = document.querySelectorAll(".payment-options a");
+      const paymentDetails = document.querySelectorAll(".payment-details");
+  
+      paymentOptions.forEach(option => {
+        option.addEventListener("click", function(e) {
+          e.preventDefault();
+          const target = this.getAttribute("data-payment");
+          paymentOptions.forEach(option => option.classList.remove("active"));
+          this.classList.add("active");
+          paymentDetails.forEach(detail => {
+            if (detail.id === target) {
+              detail.style.display = "block";
+            } else {
+              detail.style.display = "none";
+            }
+          });
+        });
+      });
+  
+      const copyPixButton = document.getElementById("copyPixButton");
+      copyPixButton.addEventListener("click", function() {
+        const pixCode = document.querySelector("#pix p").innerText;
+        navigator.clipboard.writeText(pixCode);
+        alert("Código PIX copiado!");
+      });
+    });
+  </script>
+  <a href="../index.html" class="cadastro-software-botao-voltar">Voltar</a>
+  </body>
+</html>
+

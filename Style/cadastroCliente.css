@@ -1,0 +1,78 @@
+body {
+    font: 100% "Work Sans", Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .cadastro_cliente {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cadastro_cliente h2 {
+    text-align: center;
+  }
+  
+  .cadastro_cliente label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .cadastro_cliente input[type="text"],
+  .cadastro_cliente input[type="date"],
+  .cadastro_cliente input[type="email"],
+  .cadastro_cliente input[type="password"],
+  .cadastro_cliente select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .links-cadastro {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    padding-top: 0%;
+}
+  
+.cadastro_cliente input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #1004c5;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+  
+  .cadastro_cliente input[type="submit"]:hover {
+    background-color: #07216b;
+  }
+  
+  .cadastro-cliente-botao-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #616161;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .cadastro-cliente-botao-voltar:hover {
+    background-color: #424242;
+  }

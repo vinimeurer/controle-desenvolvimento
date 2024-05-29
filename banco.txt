@@ -1,0 +1,106 @@
+CREATE DATABASE progweb;
+USE progweb;
+
+CREATE TABLE software (
+    id_software INT AUTO_INCREMENT PRIMARY KEY,
+    data_lancamento VARCHAR(12),
+    desc_software VARCHAR(500),
+    nome_software VARCHAR(50),
+    valor_software VARCHAR(15),
+    fk_programador_id_programador INT,
+    fk_linguagem_id_linguagem INT
+);
+
+CREATE TABLE linguagem (
+    id_linguagem INT AUTO_INCREMENT PRIMARY KEY,
+    nome_linguagem VARCHAR(30),
+    framework VARCHAR(3)
+);
+
+CREATE TABLE programador (
+    id_programador INT AUTO_INCREMENT PRIMARY KEY,
+    primeiro_nome VARCHAR(40),
+    ultimo_nome VARCHAR(40),
+    cpf_programador VARCHAR(20),
+    data_nascimento VARCHAR(12),
+    fk_linguagem_id_linguagem INT,
+    fk_municipio_id_municipio INT
+);
+
+CREATE TABLE municipio (
+    id_municipio INT AUTO_INCREMENT PRIMARY KEY,
+    nome_municipio VARCHAR(70),
+    fk_uf_id_uf INT
+);
+
+CREATE TABLE uf (
+    id_uf INT AUTO_INCREMENT PRIMARY KEY,
+    nome_uf VARCHAR(30),
+    sigla_uf CHAR(2)
+);
+
+CREATE TABLE cliente (
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    primeiro_nome VARCHAR(40),
+    ultimo_nome VARCHAR(40),
+    cpf_cliente VARCHAR(20),
+    data_nascimento VARCHAR(12),
+    email_cliente VARCHAR(100),
+    senha_cliente VARCHAR(100)
+);
+
+CREATE TABLE login (
+    login_senha VARCHAR(255),
+    login_email VARCHAR(255)
+);
+
+CREATE TABLE compra (
+    id_compra INT AUTO_INCREMENT PRIMARY KEY,
+    fk_cliente_id_cliente INT,
+    fk_software_id_software INT,
+    data_compra VARCHAR(12),
+    valor_compra varchar(10)
+);
+ 
+ALTER TABLE software ADD CONSTRAINT FK_software_2
+    FOREIGN KEY (fk_programador_id_programador)
+    REFERENCES programador (id_programador)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE software ADD CONSTRAINT FK_software_3
+    FOREIGN KEY (fk_linguagem_id_linguagem)
+    REFERENCES linguagem (id_linguagem)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE programador ADD CONSTRAINT FK_programador_2
+    FOREIGN KEY (fk_linguagem_id_linguagem)
+    REFERENCES linguagem (id_linguagem)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE programador ADD CONSTRAINT FK_programador_3
+    FOREIGN KEY (fk_municipio_id_municipio)
+    REFERENCES municipio (id_municipio)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE municipio ADD CONSTRAINT FK_municipio_2
+    FOREIGN KEY (fk_uf_id_uf)
+    REFERENCES uf (id_uf)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE compra ADD CONSTRAINT FK_compra_1
+    FOREIGN KEY (fk_cliente_id_cliente)
+    REFERENCES cliente (id_cliente)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE compra ADD CONSTRAINT FK_compra_2
+    FOREIGN KEY (fk_software_id_software)
+    REFERENCES software (id_software)
+    ON DELETE RESTRICT;
+
+
+INSERT INTO login (login_email, login_senha) VALUES ('adm@gmail.com', 'adm123');
+
+
+
+
+
